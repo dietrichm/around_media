@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ *    Adds Views plugins for Around.Media
+ */
+
+/**
+ * Implements hook_views_api().
+ */
+function around_media_views_api() {
+  return array(
+    'api' => 3,
+  );
+}
+
+function around_media_theme() {
+  return array(
+    'around_media' => array(
+      'variables' => array('items' => array(), 'settings' => array()),
+      'template' => 'theme/around_media',
+      'file' => 'theme/around_media.theme.inc',
+    ),
+  );
+}

@@ -1,0 +1,7 @@
+name = "Around Media"
+description = "Integration with Around.Media for Views"
+core = 7.x
+dependencies[] = views
+
+files[] = around_media.views.inc
+files[] = around_media_views_plugin_style.inc
