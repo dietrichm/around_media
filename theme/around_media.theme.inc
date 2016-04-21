@@ -8,7 +8,9 @@ function theme_around_media(&$vars) {
   global $language;
 
   // Get the ID from the first field of the result
-  $around_media_id = array_values((array) $vars['rows'][0])[0];
+  $first_row = (array) $vars['rows'][0];
+  $field_values = array_values($first_row);
+  $around_media_id = $field_values[0];
 
   if ($around_media_id) {
     $attributes = array(
@@ -19,7 +21,7 @@ function theme_around_media(&$vars) {
 
     $output = array(
       '#type' => 'markup',
-      '#prefix' => '<div id="360view" style="max-height: 400px; overflow: hidden;">',
+      '#prefix' => '<div id="view-360" style="max-height: 400px; overflow: hidden;">',
       '#markup' => '<div id="around"' . drupal_attributes($attributes) . '></div>',
       '#suffix' => '</div>',
     );
