@@ -16,6 +16,7 @@ function theme_around_media(&$vars) {
     $attributes = array(
       'data-tour' => $around_media_id,
       'data-lang' => $language->language,
+      'data-layout-boxed' => 'false',
       'style' => 'width: 100%; height: 400px;'
     );
 
